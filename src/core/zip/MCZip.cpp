@@ -110,7 +110,7 @@ static ErrorCode addFile(zipFile file, String * path)
     time(&clock);
     
     struct tm timevalue;
-    zip_fileinfo zi;
+    mail_zip_fileinfo zi;
     gmtime_r(&clock, &timevalue);
     zi.tmz_date.tm_sec = timevalue.tm_sec;
     zi.tmz_date.tm_min = timevalue.tm_min;

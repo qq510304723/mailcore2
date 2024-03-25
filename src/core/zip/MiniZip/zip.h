@@ -104,7 +104,7 @@ typedef struct
 
     uLong       internal_fa;    /* internal file attributes        2 bytes */
     uLong       external_fa;    /* external file attributes        4 bytes */
-} zip_fileinfo;
+} mail_zip_fileinfo;
 
 typedef const char* zipcharpc;
 
@@ -146,7 +146,7 @@ extern zipFile ZEXPORT zipOpen2_64 OF((const void *pathname,
 
 extern int ZEXPORT zipOpenNewFileInZip OF((zipFile file,
                        const char* filename,
-                       const zip_fileinfo* zipfi,
+                       const mail_zip_fileinfo* zipfi,
                        const void* extrafield_local,
                        uInt size_extrafield_local,
                        const void* extrafield_global,
@@ -157,7 +157,7 @@ extern int ZEXPORT zipOpenNewFileInZip OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip64 OF((zipFile file,
                        const char* filename,
-                       const zip_fileinfo* zipfi,
+                       const mail_zip_fileinfo* zipfi,
                        const void* extrafield_local,
                        uInt size_extrafield_local,
                        const void* extrafield_global,
@@ -186,7 +186,7 @@ extern int ZEXPORT zipOpenNewFileInZip64 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip2 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,
@@ -199,7 +199,7 @@ extern int ZEXPORT zipOpenNewFileInZip2 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip2_64 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,
@@ -215,7 +215,7 @@ extern int ZEXPORT zipOpenNewFileInZip2_64 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip3 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,
@@ -232,7 +232,7 @@ extern int ZEXPORT zipOpenNewFileInZip3 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip3_64 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,
@@ -258,7 +258,7 @@ extern int ZEXPORT zipOpenNewFileInZip3_64 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip4 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,
@@ -279,7 +279,7 @@ extern int ZEXPORT zipOpenNewFileInZip4 OF((zipFile file,
 
 extern int ZEXPORT zipOpenNewFileInZip4_64 OF((zipFile file,
                                             const char* filename,
-                                            const zip_fileinfo* zipfi,
+                                            const mail_zip_fileinfo* zipfi,
                                             const void* extrafield_local,
                                             uInt size_extrafield_local,
                                             const void* extrafield_global,

@@ -1053,7 +1053,7 @@ int Write_LocalFileHeader(zip64_internal* zi, const char* filename, uInt size_ex
  It is not done here because then we need to realloc a new buffer since parameters are 'const' and I want to minimize
  unnecessary allocations.
  */
-extern int ZEXPORT zipOpenNewFileInZip4_64 (zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip4_64 (zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                          const void* extrafield_local, uInt size_extrafield_local,
                                          const void* extrafield_global, uInt size_extrafield_global,
                                          const char* comment, int method, int level, int raw,
@@ -1262,7 +1262,7 @@ extern int ZEXPORT zipOpenNewFileInZip4_64 (zipFile file, const char* filename, 
     return err;
 }
 
-extern int ZEXPORT zipOpenNewFileInZip4 (zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip4 (zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                          const void* extrafield_local, uInt size_extrafield_local,
                                          const void* extrafield_global, uInt size_extrafield_global,
                                          const char* comment, int method, int level, int raw,
@@ -1278,7 +1278,7 @@ extern int ZEXPORT zipOpenNewFileInZip4 (zipFile file, const char* filename, con
                                  password, crcForCrypting, versionMadeBy, flagBase, 0);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip3 (zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip3 (zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                          const void* extrafield_local, uInt size_extrafield_local,
                                          const void* extrafield_global, uInt size_extrafield_global,
                                          const char* comment, int method, int level, int raw,
@@ -1293,7 +1293,7 @@ extern int ZEXPORT zipOpenNewFileInZip3 (zipFile file, const char* filename, con
                                  password, crcForCrypting, VERSIONMADEBY, 0, 0);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip3_64(zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip3_64(zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                          const void* extrafield_local, uInt size_extrafield_local,
                                          const void* extrafield_global, uInt size_extrafield_global,
                                          const char* comment, int method, int level, int raw,
@@ -1308,7 +1308,7 @@ extern int ZEXPORT zipOpenNewFileInZip3_64(zipFile file, const char* filename, c
                                  password, crcForCrypting, VERSIONMADEBY, 0, zip64);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip2(zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip2(zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                         const void* extrafield_local, uInt size_extrafield_local,
                                         const void* extrafield_global, uInt size_extrafield_global,
                                         const char* comment, int method, int level, int raw)
@@ -1321,7 +1321,7 @@ extern int ZEXPORT zipOpenNewFileInZip2(zipFile file, const char* filename, cons
                                  NULL, 0, VERSIONMADEBY, 0, 0);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip2_64(zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip2_64(zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                         const void* extrafield_local, uInt size_extrafield_local,
                                         const void* extrafield_global, uInt size_extrafield_global,
                                         const char* comment, int method, int level, int raw, int zip64)
@@ -1334,7 +1334,7 @@ extern int ZEXPORT zipOpenNewFileInZip2_64(zipFile file, const char* filename, c
                                  NULL, 0, VERSIONMADEBY, 0, zip64);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip64 (zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip64 (zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                         const void* extrafield_local, uInt size_extrafield_local,
                                         const void*extrafield_global, uInt size_extrafield_global,
                                         const char* comment, int method, int level, int zip64)
@@ -1347,7 +1347,7 @@ extern int ZEXPORT zipOpenNewFileInZip64 (zipFile file, const char* filename, co
                                  NULL, 0, VERSIONMADEBY, 0, zip64);
 }
 
-extern int ZEXPORT zipOpenNewFileInZip (zipFile file, const char* filename, const zip_fileinfo* zipfi,
+extern int ZEXPORT zipOpenNewFileInZip (zipFile file, const char* filename, const mail_zip_fileinfo* zipfi,
                                         const void* extrafield_local, uInt size_extrafield_local,
                                         const void*extrafield_global, uInt size_extrafield_global,
                                         const char* comment, int method, int level)
