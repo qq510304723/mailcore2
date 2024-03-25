@@ -75,3 +75,5 @@ MailCore 2 is BSD-Licensed.
 ## MailCore Supporters ##
 
 [<img src="https://triage.cc/triage-badge.png" width="180">](https://triage.cc?ref=mailcore)
+
+add test
