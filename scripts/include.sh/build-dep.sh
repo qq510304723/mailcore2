@@ -80,13 +80,13 @@ build_git_ios()
     echo failed
     exit 1
   fi
-  sdk="iphonesimulator$sdkversion"
-  echo building $sdk
-  xcodebuild -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$simarchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkminversion" OTHER_CFLAGS='$(inherited)'
-  if test x$? != x0 ; then
-    echo failed
-    exit 1
-  fi
+  # sdk="iphonesimulator$sdkversion"
+  # echo building $sdk
+  # xcodebuild -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$simarchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkminversion" OTHER_CFLAGS='$(inherited)'
+  # if test x$? != x0 ; then
+  #   echo failed
+  #   exit 1
+  # fi
   echo finished
 
   if echo $library|grep '\.framework$'>/dev/null ; then
@@ -104,9 +104,10 @@ build_git_ios()
     else
       mv Release-iphoneos/include "$name-$version/$name"
     fi
-    lipo -create "Release-iphoneos/$library" \
-      "Release-iphonesimulator/$library" \
-        -output "$name-$version/$name/lib/$library"
+    # lipo -create "Release-iphoneos/$library" \
+    #   "Release-iphonesimulator/$library" \
+    #     -output "$name-$version/$name/lib/$library"
+    mv "Release-iphoneos/$library" "$name-$version/$name/lib/$library"
     for dep in $embedded_deps ; do
       if test -d "$srcdir/$name/build-mac/$dep" ; then
         mv "$srcdir/$name/build-mac/$dep" "$name-$version"
